@@ -1,0 +1,90 @@
+/**
+ * Beige theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+$imgpath: "./img/old_mathematics.png";
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../lib/font/league_gothic-webfont.eot');
+	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker|Cabin+Sketch:400,700|Walter+Turncoat|Gloria+Hallelujah|Coming+Soon|Nothing+You+Could+Do|Rock+Salt|Architects+Daughter|Open+sans);
+
+// Override theme settings (see ../template/settings.scss)
+// Background of the presentation
+$backgroundColor: #2b2b2b;
+
+// Primary/body text
+$mainFont: 'Open Sans', sans-serif;
+$mainFontSize: 36px;
+$mainColor: #000;
+
+// Headings
+$headingFont: 'Permanent Marker', cursive;
+$headingColor: black;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: Steelblue;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: black;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: {
+		image: url($imgpath);
+		repeat: repeat-x repeat-y;
+	}
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+	margin: 20px 0 60px 0 !important;
+}
+
+.reveal h3 {
+	color: Steelblue !important;
+}
+
+.backward {
+    @include opacity(50%);
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
