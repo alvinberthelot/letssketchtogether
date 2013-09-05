@@ -43,7 +43,7 @@ $mainFontSize: 36px;
 $mainColor: #000;
 
 // Headings
-$headingFont: 'Permanent Marker', cursive;
+$headingFont: 'Permanent Marker', sans-serif;
 $headingColor: black;
 $headingLineHeight: 0.9em;
 $headingLetterSpacing: 0.02em;
@@ -81,9 +81,9 @@ $selectionColor: black;
 	color: Steelblue !important;
 }
 
-.backward {
-    @include opacity(50%);
-}
+// .backward {
+//     @include opacity(50%);
+// }
 
 // Theme template ------------------------------
 @import "../template/theme";
